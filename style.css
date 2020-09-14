@@ -1,0 +1,562 @@
+/*
+Theme Name: Reciprocity
+Theme URI: https://keithsolomon.net
+Description: Custom theme for me
+Version: 2.0
+Author: Keith Solomon
+Author URL: https://keithsolomon.net
+
+	Unless otherwise noted, all code in this theme complies with the GNU GPL 2.0 license.
+	For a copy, please refer to the following link: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+@import url('css/reset.css');
+@import url('css/wp.css');
+
+/*
+	Google Fonts:
+	font-family: 'Kufam', cursive;
+	font-family: 'Open Sans', sans-serif;
+	font-family: 'Roboto Mono', monospace;
+*/
+
+body {
+	background: #fff;
+	color: #000;
+	font: 100%/1.6875 'Open Sans', sans-serif;
+	text-align: left;
+}
+
+/** Preload hover images */
+	body:after{
+		display: none;
+		content: url(images/ig-icon-hover.png) url(images/fb-icon-hover.png) url(images/custom-sub-hover.png) url(images/cart-btn-hover.png) url(images/prodlink-hover.png) url(images/buy-btn-hover.png);
+	}
+
+#wrapper {
+	margin: 0 auto;
+	max-width: 1260px;
+	width: 98%;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	-js-display: flex;
+	display: flex;
+	-webkit-flex-direction: row;
+	-ms-flex-direction: row;
+	flex-direction: row;
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-webkit-justify-content: space-between;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+}
+
+/** LINKS */
+	a:link, a:visited, a:active { text-decoration: none; }
+
+	a:hover { }
+
+	a.more-link {
+		display: block;
+		margin-top: 1.5em;
+	}
+
+/** HEADER */
+	#header {
+		border-bottom: 1px solid #333;
+		margin: 1em 0 3em;
+		-webkit-flex: 0 1 100%;
+		-ms-flex: 0 1 100%;
+		flex: 0 1 100%;
+	}
+
+	/** LOGO */
+		#logo { margin-bottom: 0; }
+
+		#logo h1 a:link, #logo h1 a:visited, #logo h1 a:active {
+			font-size: 2.4rem;
+			text-decoration: none;
+		}
+
+		#logo h1 a:hover { }
+
+		#logo h2 {
+			font-size: 1.8rem;
+			font-weight: normal;
+		}
+
+	/** NAVIGATION */
+		#st-trigger-effects {
+			display: none;
+		}
+
+		#nav ul {
+			display: -ms-flexbox;
+			display: -webkit-flex;
+			-js-display: flex;
+			display: flex;
+			-webkit-flex-wrap: wrap;
+			-ms-flex-wrap: wrap;
+			flex-wrap: wrap;
+			-webkit-justify-content: space-around;
+			-ms-flex-pack: space-around;
+			justify-content: space-around;
+			font-size: 1.2rem;
+			margin: 0 0 1em;
+			padding: 0;
+		}
+
+		#nav li a:link, #nav li a:visited, #nav li a:active {
+			align-items: flex-start;
+			color: #007ac9;
+			font-weight: bold;
+			padding: 5px 10px;
+			text-align: center;
+			text-decoration: none;
+		}
+
+		#nav li a:hover, #nav li.current_page_item a, #nav li.current-page-ancestor a {
+			background: #007ac9;
+			color: #fff;
+		}
+
+		/** SUCKERFISH DROPDOWNS */
+			#nav li ul { /* second-level lists */
+				background: #fff;
+				border: 1px solid #333 !important;
+				-webkit-flex-direction: column;
+				-ms-flex-direction: column;
+				flex-direction: column;
+				left: -999em; /* using left instead of display to hide menus because display: none isn't read by screen readers */
+				margin: 0 !important;
+				position: absolute;
+				width: 10em;
+			}
+
+			#nav li ul li a:link, #nav li ul li a:visited, #nav li ul li a:active {
+				background: transparent;
+				color: #007ac9;
+				display: block;
+				font-size: 1em;
+				height: auto !important;
+				width: 10em;
+			}
+
+			#nav li ul li a:hover {
+				background: #007ac9;
+				color: #fff;
+			}
+
+			#nav li:hover ul, #nav li.sfhover ul { /* lists nested under hovered list items */
+				left: auto;
+			}
+
+/** CONTENT */
+	/** HOMEPAGE CONTENT */
+
+	#content {
+		-webkit-flex: 0 1 70%;
+		-ms-flex: 0 1 70%;
+		flex: 0 1 70%;
+	}
+
+	.content .featured {
+		color: #666;
+		font-size: 0.62rem;
+		font-weight: 500;
+		letter-spacing: 0.1em;
+		line-height: 2.6em;
+		text-transform: uppercase;
+	}
+
+	.content .post { margin-bottom: 1.5em; }
+
+	.content .odd { }
+
+	.content .even { }
+
+	.content .postmeta {
+		border: 1px solid #333;
+		border-left: none;
+		border-right: none;
+		line-height: 1.4em;
+		margin-bottom: 1em;
+		padding: .5em;
+	}
+
+	.navigation {
+		float: left;
+		padding: 1em;
+		width: 100%;
+	}
+
+	.content p { margin-bottom: 1.5em; }
+
+	/** RESPONSIVE EMBEDS */
+		.embed { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; }
+		.embed iframe, .embed object, .embed embed, .embed video { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+
+	/** GALLERY STYLES */
+		.content img.attachment-thumbnail {
+			border: none;
+			height: 92px;
+			margin: 0;
+			padding: 0;
+			width: 92px;
+		}
+
+		.gallery {
+			margin: auto;
+			/* gallery clearing */
+			overflow: hidden;
+			width: 100%;
+		}
+
+		.gallery .gallery-item {
+			float: left;
+			margin-top: 10px;
+			text-align: center;
+		}
+
+		.gallery img { border: 2px solid #cfcfcf; }
+
+		.gallery .gallery-caption { margin-left: 0; }
+
+		.gallery br { clear: both }
+
+		/* Available Columns */
+		.col-2 { width: 50% }
+		.col-3 { width: 33.333% }
+		.col-4 { width: 25% }
+		.col-5 { width: 20% }
+		.col-6 { width: 16.666% }
+		.col-7 { width: 14.285% }
+		.col-8 { width: 12.5% }
+		.col-9 { width: 11.111% }
+
+	/** PAGE BAR NAV STYLING */
+		.pb-nav { clear: both; }
+
+		.pb-nav a, .pb-nav span {
+			text-decoration: none;
+			border: 1px solid #BFBFBF;
+			padding: 3px 5px;
+			margin: 2px;
+		}
+
+		.pb-nav a:hover, .pb-nav span.current { border-color: #000; }
+
+		.pb-nav span.current { font-weight: bold; }
+
+	/** HEADING STYLES */
+		h1, h2, h3, h4, h5, h6 {
+			font-family: 'Kufam', sans-serif;
+		}
+
+		.content h1 { font-size: 2rem; }
+
+		.content h2 { font-size: 1.8rem; }
+
+		.content h2.pagetitle {
+			font-size: 2rem;
+			font-weight: normal;
+			margin-bottom: 0;
+		}
+
+		.content h2.pagetitle a:link, .content h2.pagetitle a:visited, .content h2.pagetitle a:active { text-decoration: none; }
+
+		.content h2.pagetitle a:hover { }
+
+		.content h3 {
+			font-size: 1.5rem;
+			font-weight: bold;
+		}
+
+		.content h4 {
+			font-size: 1.4rem;
+			font-weight: bold;
+		}
+
+		.content h5 {
+			font-size: 1.3rem;
+			font-weight: bold;
+		}
+
+		.content h6 {
+			font-size: 1.2rem;
+			font-weight: bold;
+		}
+
+	/** QUOTES & LISTS */
+		.content blockquote {
+			font-style: italic;
+			line-height: 1.4em;
+			margin-bottom: 1.8em;
+			padding: 0 1.5em;
+		}
+
+		.content ul, .content ol { margin: 0 0 1.5em 3em; }
+
+		.content li {
+			font-size: 1rem;
+			line-height: 1.4em;
+			margin-bottom: .5em;
+		}
+
+		.content ul li { list-style-type: disc; }
+
+		.content ol li { list-style-type: decimal; }
+
+		.content li ul { margin-bottom: 0; }
+
+		.content li li { font-size: 1em; }
+
+/** SIDEBAR */
+	#sidebar {
+		border-left: 1px solid #333;
+		-webkit-flex: 0 1 25%;
+		-ms-flex: 0 1 25%;
+		flex: 0 1 25%;
+		padding-left: 25px;
+	}
+
+	.sidebar a:link, .sidebar a:visited, .sidebar a:active { text-decoration: none; }
+
+	.sidebar a:hover { }
+
+	.sidebar .widgetblock { margin-bottom: 1.5em; }
+
+	.sidebar h3 {
+		font-size: 1.5rem;
+		font-weight: bold;
+		margin-bottom: 0;
+	}
+
+	.sidebar ul, .sidebar ol { margin: 0 0 1.5em 3em; }
+
+	.sidebar li {
+		font-size: 1rem;
+		line-height: 1.4em;
+		margin-bottom: .5em;
+	}
+
+	.sidebar ul li { list-style-type: square; }
+
+	.sidebar li ul { margin-bottom: 0; }
+
+	.sidebar li li { font-size: 1rem; }
+
+/** COMMENTS */
+	#comments { margin: 3em 0; }
+
+	#comments h3 {
+		border-bottom: 1px solid #333;
+		margin: 0 0 1em;
+	}
+
+	#comments .commentlist {
+		margin: 0;
+		padding: 0;
+	}
+
+	#comments .commentlist li {
+		font-size: 1.2rem;
+		list-style: none;
+		margin: 0 0 1em;
+		padding: .5em;
+	}
+
+	#comments .commentlist li.alt {
+		background: #eee;
+		border-bottom: 1px solid #333;
+		border-top: 1px solid #333;
+	}
+
+	#comments .commentlist p {
+		font-size: 1.1rem;
+		line-height: 1.4em;
+		margin: 0;
+	}
+
+	#commentform p { margin: 0; }
+
+	#commentform p small { font-size: .85rem; }
+
+	.nocomments {
+		margin: 0;
+		padding: 0;
+	}
+
+	.commentmetadata {
+		display: block;
+		margin: 0 0 1.5em;
+	}
+
+	#comments .commentmetadata a:link, #comments .commentmetadata a:visited, #comments .commentmetadata a:active { }
+
+	#comments .commentmetadata a:hover, #comments .comment-author a:hover { background: transparent; }
+
+	#comments .avatar {
+		border: 1px solid #333;
+		display: inline;
+		float: left;
+		margin: 0 .5em 0 0;
+		padding: .3em;
+	}
+
+	#comments .comment-author { font-size: 1.2rem; }
+
+	#comments .comment-author cite { }
+
+	#comments .comment-author a:link, #comments .comment-author a:visited, #comments .comment-author a:active, #comments .comment-author a:hover { text-transform: none; }
+
+	#commentform {
+		margin: 0;
+		padding-bottom: 2em;
+	}
+
+	#commentform label { font-size: 1.2rem; }
+
+	#commentform label span { font-size: 1.1rem; }
+
+	#commentform input, #commentform textarea {
+		border: 1px solid #333;
+		padding: .5em;
+	}
+
+	#commentform input:focus, #commentform textarea:focus { border: 1px solid #333; }
+
+	#commentform input#author, #commentform input#email, #commentform input#url {
+		margin-right: .5em;
+		width: 20em;
+	}
+
+	#commentform textarea {
+		margin-bottom: .5em;
+		width: 100%;
+	}
+
+	#commentform p.subscribe-to-comments {
+		display: inline;
+		float: left;
+		margin-top: -2.5em;
+	}
+
+	#commentform p.subscribe-to-comments input { margin-left: .5em; }
+
+	#commentform #submit {
+		border: 2px solid #333;
+		display: inline;
+		float: right;
+		font-size: .8rem;
+		font-weight: bold;
+		padding: .5em;
+		text-transform: uppercase;
+		-moz-border-radius: 1em;
+		-webkit-border-radius: 1em;
+	}
+
+	#commentform #submit:hover { cursor: pointer; }
+
+/** CALENDAR */
+	table#wp-calendar {
+		border: 1px solid #333;
+		border-collapse: collapse;
+	}
+
+	table#wp-calendar caption {
+		font-size: 1.4rem;
+		text-align: center;
+	}
+
+	table#wp-calendar tbody .pad { background: #ddd; }
+
+	table#wp-calendar>tbody>tr>td>a { font-weight: bold; }
+
+	table#wp-calendar thead>tr>th {
+		background: #cdd5de;
+		border: 1px solid #333;
+		height: 2em;
+		line-height: 2em;
+		text-align: center;
+		width: 2em;
+	}
+
+	table#wp-calendar tbody>tr>td {
+		border: 1px solid #333;
+		height: 2em;
+		line-height: 2em;
+		text-align: center;
+		width: 2em;
+	}
+
+	table#wp-calendar tfoot>tr>td.pad {
+		border: 1px solid #333;
+		border-left: none;
+		border-right: none;
+	}
+
+	table#wp-calendar tfoot>tr>td>a, table#wp-calendar tfoot>tr>td>a:link,
+	table#wp-calendar tfoot>tr>td>a:visited, table#wp-calendar tfoot>tr>td>a:hover,
+	table#wp-calendar tfoot>tr>td>a:active { font-weight: bold; }
+
+	table#wp-calendar tfoot>tr>td#prev {
+		background: #fff;
+		border: 1px solid #333;
+		border-right: none;
+		height: 2em;
+		line-height: 2em;
+		text-align: left;
+		padding-left: .5em;
+		width: 5.3em;
+	}
+
+	table#wp-calendar tfoot>tr>td#next {
+		background: #fff;
+		border: 1px solid #333;
+		border-left: none;
+		height: 2em;
+		line-height: 2em;
+		text-align: right;
+		padding-right: .5em;
+		width: 5.3em;
+	}
+
+/** FOOTER */
+	#footer {
+		border-top: 1px solid #333;
+		color: #333;
+		margin-top: 3em;
+		padding-top: .5em;
+		-webkit-flex: 0 1 100%;
+		-ms-flex: 0 1 100%;
+		flex: 0 1 100%;
+	}
+
+	#footer-credits, #footer-meta { width: 49%; }
+
+	#footer-meta { text-align: right; }
+
+	#footer a:link, #footer a:visited, #footer a:active { text-decoration: none; }
+
+	#footer a:hover { }
+
+	#footer p { font-size: 1.1rem; }
+
+	#footer ul { margin-bottom: 1em; }
+
+	#footer ul li {
+		border-left: 1px solid #999;
+		display: inline;
+		font-size: 1.1rem;
+		margin: 0 .5em;
+		padding: 0 1em;
+	}
+
+	#footer ul li:first-child {
+		border-left: none;
+		margin-left: 0;
+		padding-left: 0;
+	}
