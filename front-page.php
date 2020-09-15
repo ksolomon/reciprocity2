@@ -6,29 +6,28 @@
 
 <?php get_header(); ?>
 
-		<!-- content -->
-		<section id="content" class="content">
-			<?php if (have_posts()) : ?>
-				<?php while (have_posts()) : the_post(); ?>
-					<!-- Individual Post Styling -->
-					<article <?php post_class(); ?> id="entry-<?php the_ID(); ?>">
-						<h2 class="pagetitle"><?php the_title(); ?></h2>
+<!-- content -->
+<section id="content" class="content home">
+	<?php if (have_posts()) : ?>
+		<?php while (have_posts()) : the_post(); ?>
+			<!-- Individual Post Styling -->
+			<article <?php post_class('homepost'); ?> id="entry-<?php the_ID(); ?>">
+				<h2 class="pagetitle"><a href="<?php the_permalink() ?>" rel="bookmark" title='Click to read: "<?php strip_tags(the_title()); ?>"'><?php the_title(); ?></a></h2>
 
-						<?php the_content("Continue reading " . the_title('', '', false)); ?>
+				<?php the_excerpt(); ?>
 
-						<div class="clear"></div>
-					</article>
-				<?php endwhile; else : ?>
-					<!-- No Posts Found -->
-					<section id="post-0" class="post error404 not-found">
-						<h2 class="pagetitle">Page not found.</h2>
-						<p>Apologies, but we were unable to find the requested page.</p>
-						<?php get_search_form(); ?>
-					</section>
-			<?php endif; ?>
+				<div class="clear"></div>
+			</article>
+		<?php endwhile;
+	else : ?>
+		<!-- No Posts Found -->
+		<section id="post-0" class="post error404 not-found">
+			<h2 class="pagetitle">Page not found.</h2>
+			<p>Apologies, but we were unable to find the requested page.</p>
+			<?php get_search_form(); ?>
 		</section>
-		<!-- /content -->
-
-<?php get_sidebar(); ?>
+	<?php endif; ?>
+</section>
+<!-- /content -->
 
 <?php get_footer(); ?>
