@@ -437,7 +437,6 @@ body {
 	}
 
 	#commentform p.subscribe-to-comments {
-		display: inline;
 		float: left;
 		margin-top: -2.5em;
 	}
@@ -446,7 +445,6 @@ body {
 
 	#commentform #submit {
 		border: 2px solid #333;
-		display: inline;
 		float: right;
 		font-size: .8rem;
 		font-weight: bold;
