@@ -4,9 +4,6 @@
 		<section id="content" class="content">
 			<?php if (have_posts()) : ?>
 				<?php while (have_posts()) : the_post(); ?>
-					<!-- Navigation -->
-					<?php sf_display_nav(); ?>
-
 					<!-- Individual Post Styling -->
 					<article <?php post_class(); ?> id="entry-<?php the_ID(); ?>">
 						<h2 class="pagetitle"><?php the_title(); ?></h2>

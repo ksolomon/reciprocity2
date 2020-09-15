@@ -1,7 +1,7 @@
 <?php
 /*
 	Solo-Frame Custom comment functions
-	
+
 	This file is a part of the Solo-Frame WordPress theme framework.
 */
 

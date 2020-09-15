@@ -30,13 +30,13 @@ body {
 /** Preload hover images */
 	body:after{
 		display: none;
-		content: url(images/ig-icon-hover.png) url(images/fb-icon-hover.png) url(images/custom-sub-hover.png) url(images/cart-btn-hover.png) url(images/prodlink-hover.png) url(images/buy-btn-hover.png);
+		/* content: url(images/ig-icon-hover.png) url(images/fb-icon-hover.png) url(images/custom-sub-hover.png) url(images/cart-btn-hover.png) url(images/prodlink-hover.png) url(images/buy-btn-hover.png); */
 	}
 
 #wrapper {
 	margin: 0 auto;
-	max-width: 1260px;
-	width: 98%;
+	/* max-width: 1260px; */
+	width: 95%;
 	display: -ms-flexbox;
 	display: -webkit-flex;
 	-js-display: flex;
@@ -352,8 +352,7 @@ body {
 	#comments { margin: 3em 0; }
 
 	#comments h3 {
-		border-bottom: 1px solid #333;
-		margin: 0 0 1em;
+		margin: 0 0 .25em;
 	}
 
 	#comments .commentlist {
@@ -390,8 +389,9 @@ body {
 	}
 
 	.commentmetadata {
+		border-bottom: 1px solid #ababab;
 		display: block;
-		margin: 0 0 1.5em;
+		margin: 0;
 	}
 
 	#comments .commentmetadata a:link, #comments .commentmetadata a:visited, #comments .commentmetadata a:active { }
@@ -399,11 +399,9 @@ body {
 	#comments .commentmetadata a:hover, #comments .comment-author a:hover { background: transparent; }
 
 	#comments .avatar {
-		border: 1px solid #333;
-		display: inline;
 		float: left;
-		margin: 0 .5em 0 0;
-		padding: .3em;
+		margin: 0 15px 0 0;
+		padding: 0;
 	}
 
 	#comments .comment-author { font-size: 1.2rem; }
@@ -454,6 +452,7 @@ body {
 		font-weight: bold;
 		padding: .5em;
 		text-transform: uppercase;
+		border-radius: 1em;
 		-moz-border-radius: 1em;
 		-webkit-border-radius: 1em;
 	}
