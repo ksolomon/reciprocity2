@@ -3,8 +3,12 @@
 }
 
 @media all and (min-width: 768px) and (max-width: 1024px) {
-	/* REMOVE AFTER TESTING!! */
-	#wrapper { border: 1px solid yellow; }
+	#nav ul {
+		font-size: 1rem;
+		margin: 0 0 1em;
+		padding: 0;
+		width: 63.5vw;
+	}
 }
 
 @media all and (min-width: 480px) and (max-width: 768px) {

@@ -1,22 +1,16 @@
 <?php include (TEMPLATEPATH.'/includes/get_theme_options.php'); ?>
 
-						<!-- footer -->
-						<div id="footer">
-							<?php if ($sf_footer_text) { ?>
-								<p id="footer-credits" class="left"><?php echo $sf_footer_text; ?></p>
-							<?php } else { ?>
-								<p id="footer-credits" class="left"><?php sf_copyright(); ?></p>
-
-								<ul id="footer-meta" class="right">
-									<li><a href="http://wordpress.org">Powered by WordPress</a></li>
-								</ul>
-							<?php } ?>
-
-							<div class="clear"></div>
-						</div>
-						<!-- /footer -->
 					</div>
 					<!-- /wrapper -->
+
+					<!-- footer -->
+					<div id="footer">
+						<div id="footcol_1" class="column"></div>
+						<div id="footcol_2" class="column"></div>
+						<div id="footcol_3" class="column"></div>
+					</div>
+					<!-- /footer -->
+
 				</div><!-- /st-content-inner -->
 			</div><!-- /st-content -->
 		</div><!-- /st-pusher -->
