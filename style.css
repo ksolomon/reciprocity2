@@ -82,7 +82,7 @@ body {
 		border-radius: 10px;
 		border-top-right-radius: 0;
 		border-bottom-left-radius: 0;
-		padding: 0 10px 15px;
+		padding: 0 10px;
 		margin: 1em 0 3em;
 		-webkit-flex: 0 1 100%;
 		-ms-flex: 0 1 100%;
@@ -252,8 +252,6 @@ body {
 		padding: 1em;
 		width: 100%;
 	}
-
-	.content p { margin-bottom: 1.5em; }
 
 	/** RESPONSIVE EMBEDS */
 		.embed { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; }
@@ -664,6 +662,7 @@ body {
 		border-left: 1px solid var(--silver-chalice);
 		border-right: 1px solid var(--silver-chalice);
 		margin: 0 1%;
+		padding: 0 60px;
 		text-align: center;
 	}
 
@@ -673,21 +672,26 @@ body {
 
 	#footer h3.widgettitle {
 		border-bottom: 1px solid #ababab;
-		border-left: 1px solid #ababab;
-		border-right: 1px solid #ababab;
+		border-left: none;
+		border-right: none;
 		border-radius: 10px;
-		border-top-left-radius: 0;
-		border-top-right-radius: 0;
-		display: inline-block;
+		border-bottom-left-radius: 0;
+		border-bottom-right-radius: 0;
 		padding: 0 10px;
 	}
 
 	#footcol_1 h3.widgettitle {
+		border-left: 1px solid var(--silver-chalice);
 		border-right: none;
+		border-radius: 10px;
 		border-bottom-right-radius: 0;
+		border-top-left-radius: 0;
 	}
 
 	#footcol_3 h3.widgettitle {
+		border-right: 1px solid var(--silver-chalice);
 		border-left: none;
+		border-radius: 10px;
+		border-top-right-radius: 0;
 		border-bottom-left-radius: 0;
 	}
