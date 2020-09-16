@@ -607,11 +607,8 @@ body {
 		color: var(--blue-sapphire);
 	}
 
-	#footer p { font-size: 1.1rem; }
-
 	#footer #footer-int {
 		margin: 0 auto;
-		/* max-width: 1260px; */
 		width: 95%;
 		display: -ms-flexbox;
 		display: -webkit-flex;
@@ -640,7 +637,27 @@ body {
 		text-align: center;
 	}
 
-#footer #footcol_3 {
-	text-align: right;
-}
+	#footer #footcol_3 {
+		text-align: right;
+	}
 
+	#footer h3.widgettitle {
+		border-bottom: 1px solid #ababab;
+		border-left: 1px solid #ababab;
+		border-right: 1px solid #ababab;
+		border-radius: 10px;
+		border-top-left-radius: 0;
+		border-top-right-radius: 0;
+		display: inline-block;
+		padding: 0 10px;
+	}
+
+	#footcol_1 h3.widgettitle {
+		border-right: none;
+		border-bottom-right-radius: 0;
+	}
+
+	#footcol_3 h3.widgettitle {
+		border-left: none;
+		border-bottom-left-radius: 0;
+	}
