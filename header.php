@@ -72,7 +72,6 @@
 						<header id="header" role="banner">
 							<hgroup id="logo">
 								<h1 id="site-name"><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></h1>
-								<h2 id="site-description"><?php bloginfo('description'); ?></h2>
 							</hgroup>
 
 							<nav id="nav" role="navigation">

@@ -107,17 +107,6 @@ body {
 
 		#logo h1 a:hover { }
 
-		#logo h2 {
-			color: #ababab;
-			font-family: 'Open Sans', sans-serif;
-			font-size: 1.5rem;
-			font-style: italic;
-			font-weight: normal;
-			line-height: 1;
-			margin: 0;
-			padding: 0;
-		}
-
 	/** NAVIGATION */
 		#st-trigger-effects {
 			display: none;
@@ -217,6 +206,16 @@ body {
 			padding: 0 10px;
 		}
 
+		.content .homemeta {
+			border: none;
+			color: var(--silver-chalice);
+			font-size: .85rem;
+			font-style: italic;
+			line-height: 1.25em;
+			margin-bottom: 1em;
+			padding: 0;
+		}
+
 	#content {
 		-webkit-flex: 0 1 70%;
 		-ms-flex: 0 1 70%;
@@ -239,7 +238,7 @@ body {
 	.content .even { }
 
 	.content .postmeta {
-		border: 1px solid #333;
+		border: 1px solid var(--silver-chalice);
 		border-left: none;
 		border-right: none;
 		line-height: 1.4em;
@@ -351,7 +350,7 @@ body {
 		.content h2 { font-size: 1.8rem; }
 
 		.content h2.pagetitle {
-			font-size: 2rem;
+			font-size: 1.7rem;
 			font-weight: normal;
 			margin-bottom: 0;
 		}
