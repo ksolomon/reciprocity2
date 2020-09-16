@@ -18,8 +18,12 @@
 
 				<div class="clear"></div>
 			</article>
-		<?php endwhile;
-	else : ?>
+		<?php endwhile; ?>
+			<!-- Navigation -->
+			<?php if ($wp_query->max_num_pages > 1) : ?>
+				<?php sf_display_nav("numbar"); ?>
+			<?php endif; ?>
+	<?php else : ?>
 		<!-- No Posts Found -->
 		<section id="post-0" class="post error404 not-found">
 			<h2 class="pagetitle">Page not found.</h2>

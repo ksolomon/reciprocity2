@@ -299,13 +299,43 @@ body {
 		.col-9 { width: 11.111% }
 
 	/** PAGE BAR NAV STYLING */
-		.pb-nav { clear: both; }
+		.pb-nav {
+			clear: both;
+			margin: 0 auto;
+			max-width: 75%;
+			text-align: center;
+		}
 
 		.pb-nav a, .pb-nav span {
 			text-decoration: none;
-			border: 1px solid #BFBFBF;
+			border: 1px solid var(--silver-chalice);
+			border-top: none;
+			border-radius: 10px;
 			padding: 3px 5px;
 			margin: 2px;
+		}
+
+
+		.pb-nav a.page-numbers, .pb-nav span.page-numbers {
+			border-left: none;
+			border-right: none;
+			border-bottom-left-radius: 0;
+			border-bottom-right-radius: 0;
+		}
+
+		.pb-nav span.pages {
+			border-right: none;
+			border-bottom-right-radius: 0;
+			border-top-left-radius: 0;
+			padding: 3px 5px 3px 10px;
+		}
+
+		.pb-nav a.page-numbers.next {
+			border-right: 1px solid var(--silver-chalice);
+			border-bottom-left-radius: 0;
+			border-top-right-radius: 0;
+			border-bottom-right-radius: 10px;
+			padding: 3px 10px 3px 5px;
 		}
 
 		.pb-nav a:hover, .pb-nav span.current { border-color: #000; }
