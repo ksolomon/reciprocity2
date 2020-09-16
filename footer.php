@@ -5,20 +5,22 @@
 
 					<!-- footer -->
 					<div id="footer">
-						<div id="footcol_1" class="column">
-							<?php if (function_exists('dynamic_sidebar') && dynamic_sidebar('Footer Column 1')) : else : ?>
+						<div id="footer-int">
+							<div id="footcol_1" class="column">
+								<?php if (function_exists('dynamic_sidebar') && dynamic_sidebar('Footer Column 1')) : else : ?>
 
-							<?php endif; ?>
-						</div>
-						<div id="footcol_2" class="column">
-							<?php if (function_exists('dynamic_sidebar') && dynamic_sidebar('Footer Column 2')) : else : ?>
+								<?php endif; ?>
+							</div>
+							<div id="footcol_2" class="column">
+								<?php if (function_exists('dynamic_sidebar') && dynamic_sidebar('Footer Column 2')) : else : ?>
 
-							<?php endif; ?>
-						</div>
-						<div id="footcol_3" class="column">
-							<?php if (function_exists('dynamic_sidebar') && dynamic_sidebar('Footer Column 3')) : else : ?>
+								<?php endif; ?>
+							</div>
+							<div id="footcol_3" class="column">
+								<?php if (function_exists('dynamic_sidebar') && dynamic_sidebar('Footer Column 3')) : else : ?>
 
-							<?php endif; ?>
+								<?php endif; ?>
+							</div>
 						</div>
 					</div>
 					<!-- /footer -->
