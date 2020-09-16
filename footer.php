@@ -20,6 +20,8 @@
 								<?php if (function_exists('dynamic_sidebar') && dynamic_sidebar('Footer Column 3')) : else : ?>
 
 								<?php endif; ?>
+
+								<?php sf_copyright(); ?>
 							</div>
 						</div>
 					</div>

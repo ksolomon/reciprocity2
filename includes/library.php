@@ -382,8 +382,7 @@ function sf_copyright() {
 	}
 
 	/* Display blog name from 'General Settings' page */
-	echo ' '.get_bloginfo('name').'. ';
-	echo 'Design by <a href="http://betterbug.com/">Drake Creative</a>';
+	echo ' '.get_bloginfo('name');
 }
 
 // Get page slug

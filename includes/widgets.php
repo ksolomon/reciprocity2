@@ -7,9 +7,19 @@
 
 function sf_register_widgets() {
 	register_sidebar(array(
-		'name'=>'Primary Sidebar',
+		'name' => 'Primary Sidebar',
 		'id' => 'primary',
 		'description' => 'Sidebar widget area for regular pages.',
+		'before_widget' => '<div class="widgetblock %2$s" id="%1$s" >',
+		'after_widget' => '</div>',
+		'before_title' => '<h3 class="widgettitle">',
+		'after_title' => '</h3>',
+	));
+
+	register_sidebar(array(
+		'name' => 'Portfolio Sidebar',
+		'id' => 'portfolio',
+		'description' => 'Sidebar widget area for portfolio pages.',
 		'before_widget' => '<div class="widgetblock %2$s" id="%1$s" >',
 		'after_widget' => '</div>',
 		'before_title' => '<h3 class="widgettitle">',
