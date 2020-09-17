@@ -2,6 +2,10 @@
 
 		<!-- content -->
 		<div id="content" class="content">
+			<div class="breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
+				<?php bcn_display(); ?>
+			</div>
+
 			<?php if (have_posts()) : ?>
 				<?php while (have_posts()) : the_post(); ?>
 					<!-- Individual Post Styling -->

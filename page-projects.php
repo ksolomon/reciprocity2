@@ -8,6 +8,10 @@
 
 <!-- content -->
 <div id="content" class="content">
+	<div class="breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
+		<?php bcn_display(); ?>
+	</div>
+
 	<h2 class="pagetitle">Projects</h2>
 
 	<?php
