@@ -1,29 +1,15 @@
-<?php
-/*
-	Template Name: Portfolio Landing Page
-*/
-?>
-
 <?php get_header(); ?>
 
 <!-- content -->
 <div id="content" class="content">
-	<h2 class="pagetitle">Projects</h2>
+	<div class="breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
+		<?php bcn_display(); ?>
+	</div>
 
-	<?php
-	$args = array(
-		'order'			 => 'ASC',
-		'orderby'		 => 'title',
-		'post_type'      => 'portfolio',
-		'posts_per_page' => 10,
-	);
+	<h2 class="pagetitle"><em><?php single_cat_title(); ?></em> Projects</h2>
 
-	$loop = new WP_Query($args);
-
-	if ($loop->have_posts()) :
-		while ($loop->have_posts()) :
-			$loop->the_post();
-	?>
+	<?php if (have_posts()) : ?>
+		<?php while (have_posts()) : the_post(); ?>
 			<!-- Individual Post Styling -->
 			<div <?php post_class('entry projitem'); ?> id="entry-<?php the_ID(); ?>">
 				<h2 class="projtitle"><a href="<?php the_permalink() ?>" rel="bookmark" title='<?php strip_tags(the_title()); ?>'><?php the_title(); ?></a></h2>

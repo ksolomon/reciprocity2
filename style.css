@@ -290,6 +290,17 @@ body {
 			width: 70%;
 		}
 
+		.breadcrumbs {
+			border-bottom: 1px solid #ababab;
+			border-left: 1px solid #ababab;
+			border-radius: 10px;
+			border-top-left-radius: 0;
+			border-bottom-right-radius: 0;
+			margin: 0 0 40px;
+			padding: 0 10px;
+		}
+
+
 	.navigation {
 		float: left;
 		padding: 1em;
@@ -463,20 +474,22 @@ body {
 	.sidebar .widgetblock { margin-bottom: 1.5em; }
 
 	.sidebar h3 {
-		font-size: 1.5rem;
-		font-weight: bold;
+		color: var(--silver-chalice);
+		font-size: 1.3rem;
 		margin-bottom: 0;
 	}
 
-	.sidebar ul, .sidebar ol { margin: 0 0 1.5em 3em; }
+	.sidebar ul, .sidebar ol { margin: 0 0 1.5em 1em; }
 
 	.sidebar li {
 		font-size: 1rem;
-		line-height: 1.4em;
+		line-height: 1.2em;
 		margin-bottom: .5em;
 	}
 
-	.sidebar ul li { list-style-type: square; }
+	.sidebar ul li {
+		list-style-type: none;
+	}
 
 	.sidebar li ul { margin-bottom: 0; }
 

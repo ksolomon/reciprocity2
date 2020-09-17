@@ -120,6 +120,15 @@ function sf_generate_title_tag() {
 	endif;
 }
 
+// Add class to link in menu for styling
+function project_nav_class($classes, $item) {
+	if (is_singular('portfolio') || (is_taxonomy('portfolio_category') || is_taxonomy('portfolio_tag')) && $item->title == 'Projects') {
+		$classes[] = "current-page-ancestor";
+	}
+	return $classes;
+}
+add_filter('nav_menu_css_class', 'project_nav_class', 10, 2);
+
 // Core navigation functions
 function sf_corenav() {
 	global $wp_query, $wp_rewrite;
@@ -275,7 +284,7 @@ function sf_child_pages() {
 
 // Generate breadcrumbs
 function sf_breadcrumbs($args='') {
- 	parse_str($args);
+	parse_str($args);
 
 	if (!isset($between)) $between = '&raquo;';
 	if (!isset($name)) $name = 'Home'; //text for the 'Home' link
@@ -391,13 +400,6 @@ function sf_get_slug() {
     $slug = $post_data['post_name'];
     return $slug;
 }
-
-// Post Tag support for pages
-function sf_register_page_tags(){
-     register_taxonomy_for_object_type('post_tag', 'page');
-}
-
-add_action('init', 'sf_register_page_tags');
 
 // Adds an "even" or "odd" post class to each post using the post_class() function.
 global $current_class;
