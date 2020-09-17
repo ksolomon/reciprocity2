@@ -60,6 +60,11 @@ body {
 	justify-content: space-between;
 }
 
+/** MISC ELEMENTS */
+	code, pre {
+		font-family: 'Roboto Mono', monospace;
+	}
+
 /** LINKS */
 	a:link, a:visited, a:active {
 		color: var(--blue-sapphire);
@@ -246,6 +251,45 @@ body {
 		padding: .5em;
 	}
 
+	/** PORTFOLIO STYLES */
+		.projitem {
+			border-bottom: 1px solid #ababab;
+			border-left: 1px solid #ababab;
+			border-radius: 10px;
+			border-top-left-radius: 0;
+			border-bottom-right-radius: 0;
+			float: left;
+			margin: 0 0 40px;
+			padding: 0 10px;
+			width: 75%;
+		}
+
+		.projitem.even {
+			border-bottom: 1px solid #ababab;
+			border-left: none;
+			border-right: 1px solid #ababab;
+			border-radius: 10px;
+			border-top-right-radius: 0;
+			border-bottom-left-radius: 0;
+			float: right;
+			padding: 0 10px;
+		}
+
+		.projimg {
+			float: left;
+			width: 25%;
+		}
+
+		.projimg img {
+			height: auto;
+			max-width: 100%;
+		}
+
+		.projinfo {
+			float: right;
+			width: 70%;
+		}
+
 	.navigation {
 		float: left;
 		padding: 1em;
@@ -347,10 +391,11 @@ body {
 
 		.content h1 { font-size: 2rem; }
 
-		.content h2 { font-size: 1.8rem; }
+		.content h2 { font-size: 1.4rem; }
 
 		.content h2.pagetitle {
-			font-size: 1.7rem;
+			color: var(--silver-chalice);
+			font-size: 1.65rem;
 			font-weight: normal;
 			margin-bottom: 0;
 		}
@@ -360,12 +405,12 @@ body {
 		.content h2.pagetitle a:hover { }
 
 		.content h3 {
-			font-size: 1.5rem;
+			font-size: 1.2rem;
 			font-weight: bold;
 		}
 
 		.content h4 {
-			font-size: 1.4rem;
+			font-size: 1.1rem;
 			font-weight: bold;
 		}
 
