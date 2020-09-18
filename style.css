@@ -13,20 +13,20 @@ Author URL: https://keithsolomon.net
 @import url('css/reset.css');
 @import url('css/wp.css');
 
-/*
-	Google Fonts:
+/** GOOGLE FONT DECLARATIONS
 	font-family: 'Kufam', cursive;
 	font-family: 'Open Sans', sans-serif;
 	font-family: 'Roboto Mono', monospace;
 */
 
-:root {
-	--white: #ffffff;
-	--silver-chalice: #ababab;
-	--blue-sapphire: #065a82;
-	--xiketic: #010114;
-	--blue-sapphire-2: #0b4f6c;
-}
+/** SITE COLOR VARIABLES */
+	:root {
+		--white: #ffffff;
+		--silver-chalice: #ababab;
+		--blue-sapphire: #065a82;
+		--xiketic: #010114;
+		--blue-sapphire-2: #0b4f6c;
+	}
 
 body {
 	background: #fff;
@@ -475,6 +475,22 @@ body {
 		-ms-flex: 0 1 15%;
 		flex: 0 1 15%;
 		padding-left: 25px;
+	}
+
+	#sidebar.projects {
+		border-bottom: 1px solid #ababab;
+		border-left: 1px solid #ababab;
+		border-radius: 10px;
+		border-top-left-radius: 0;
+		border-bottom-right-radius: 0;
+		display: inline-block;
+		flex: none;
+		height: 100%;
+		padding-left: 15px;
+		position: -webkit-sticky;
+		position: sticky;
+		top: 20px;
+		width: 15%;
 	}
 
 	.sidebar a:link, .sidebar a:visited, .sidebar a:active { text-decoration: none; }
