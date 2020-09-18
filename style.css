@@ -21,11 +21,11 @@ Author URL: https://keithsolomon.net
 */
 
 :root {
-	--white: #ffffffff;
-	--silver-chalice: #abababff;
-	--blue-sapphire: #065a82ff;
-	--xiketic: #1e000eff;
-	--blue-sapphire-2: #0b4f6cff;
+	--white: #ffffff;
+	--silver-chalice: #ababab;
+	--blue-sapphire: #065a82;
+	--xiketic: #010114;
+	--blue-sapphire-2: #0b4f6c;
 }
 
 body {
@@ -62,7 +62,12 @@ body {
 
 /** MISC ELEMENTS */
 	code, pre {
+		background: var(--silver-chalice);
+		display: inline-block;
 		font-family: 'Roboto Mono', monospace;
+		margin: 0 0 10px;
+		padding: 5px 10px;
+		/* width: 85%; */
 	}
 
 /** LINKS */
@@ -251,6 +256,16 @@ body {
 		padding: .5em;
 	}
 
+	.breadcrumbs {
+		border-bottom: 1px solid #ababab;
+		border-left: 1px solid #ababab;
+		border-radius: 10px;
+		border-top-left-radius: 0;
+		border-bottom-right-radius: 0;
+		margin: 0 0 40px;
+		padding: 0 10px;
+	}
+
 	/** PORTFOLIO STYLES */
 		.projitem {
 			border-bottom: 1px solid #ababab;
@@ -290,16 +305,18 @@ body {
 			width: 70%;
 		}
 
-		.breadcrumbs {
-			border-bottom: 1px solid #ababab;
-			border-left: 1px solid #ababab;
-			border-radius: 10px;
-			border-top-left-radius: 0;
-			border-bottom-right-radius: 0;
-			margin: 0 0 40px;
-			padding: 0 10px;
+		.project p {
+			margin-bottom: 1.5em;
 		}
 
+		.project table, .project table td {
+			border: 1px solid var(--silver-chalice);
+			border-collapse: collapse;
+		}
+
+		.project table td {
+			padding: 0 8px;
+		}
 
 	.navigation {
 		float: left;

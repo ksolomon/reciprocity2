@@ -9,7 +9,7 @@
 			<?php if (have_posts()) : ?>
 				<?php while (have_posts()) : the_post(); ?>
 					<!-- Individual Post Styling -->
-					<div class="entry" id="entry-<?php the_ID(); ?>">
+					<div class="entry project" id="entry-<?php the_ID(); ?>">
 						<h2 class="pagetitle"><?php the_title(); ?></h2>
 
 						<?php the_content("Continue reading " . the_title('', '', false)); ?>
