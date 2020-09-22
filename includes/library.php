@@ -282,6 +282,17 @@ function sf_child_pages() {
 	print $output;
 }
 
+// Change order for project taxonomies
+function customise_speakers_taxonomy_archive_display($query) {
+	if (($query->is_main_query()) && (is_tax('portfolio_category') || is_tax('portfolio_tag'))) {
+		$query->set('posts_per_page', '5');
+		$query->set('orderby', 'title');
+		$query->set('order', 'ASC');
+	}
+}
+
+add_action('pre_get_posts', 'customise_speakers_taxonomy_archive_display');
+
 // Generate breadcrumbs
 function sf_breadcrumbs($args='') {
 	parse_str($args);
