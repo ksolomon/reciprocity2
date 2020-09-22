@@ -12,7 +12,7 @@ get_header();
 	<div id="content" class="content">
 		<div class="entry" id="entry-err">
 			<h2 class="pagetitle">Can't find that page, sorry... <small>(Error 404)</small></h2>
-			
+
 			<p>Let me help you find what you came here for:</p>
 
 			<?php
