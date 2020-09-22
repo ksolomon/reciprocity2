@@ -122,7 +122,7 @@ function sf_generate_title_tag() {
 
 // Add class to link in menu for styling
 function project_nav_class($classes, $item) {
-	if ((is_singular('portfolio') || is_tax('portfolio_category') || is_tax('portfolio_tag') || is_archive('portfolio')) && $item->title == 'Projects') {
+	if ((is_singular('projects') || is_tax('software') || is_tax('skills') || is_archive('projects')) && $item->title == 'Projects') {
 		$classes[] = "current-page-ancestor";
 	}
 	return $classes;

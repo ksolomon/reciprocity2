@@ -16,8 +16,8 @@
 
 				<div class="projimg"><?php the_post_thumbnail('full'); ?></div>
 				<div class="projinfo">
-					<strong>Software:</strong> <?php echo get_the_term_list(get_the_id(), 'portfolio_category', '', ' / ', ''); ?><br />
-					<strong>Language/Type:</strong> <?php echo get_the_term_list(get_the_id(), 'portfolio_tag', '', ' / ', ''); ?><br />
+					<strong>Software:</strong> <?php echo get_the_term_list(get_the_id(), 'software', '', ' / ', ''); ?><br />
+					<strong>Skills:</strong> <?php echo get_the_term_list(get_the_id(), 'skills', '', ' / ', ''); ?><br />
 					<br />
 					<strong>Description:</strong>
 					<?php the_excerpt(); ?>

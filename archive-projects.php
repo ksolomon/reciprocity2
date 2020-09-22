@@ -1,6 +1,6 @@
 <?php
 /*
-	Template Name: Portfolio Landing Page
+	Template Name: Projects Landing Page
 */
 ?>
 
@@ -18,8 +18,8 @@
 	$args = array(
 		'order'			 => 'ASC',
 		'orderby'		 => 'title',
-		'post_type'      => 'portfolio',
-		'posts_per_page' => 10,
+		'post_type'      => 'projects',
+		'posts_per_page' => 5,
 	);
 
 	$loop = new WP_Query($args);
@@ -34,8 +34,8 @@
 
 				<div class="projimg"><?php the_post_thumbnail('full'); ?></div>
 				<div class="projinfo">
-					<strong>Software:</strong> <?php echo get_the_term_list(get_the_id(), 'portfolio_category', '', ' / ', ''); ?><br />
-					<strong>Language/Type:</strong> <?php echo get_the_term_list(get_the_id(), 'portfolio_tag', '', ' / ', ''); ?><br />
+					<strong>Software:</strong> <?php echo get_the_term_list(get_the_id(), 'software', '', ' / ', ''); ?><br />
+					<strong>Skills:</strong> <?php echo get_the_term_list(get_the_id(), 'skills', '', ' / ', ''); ?><br />
 					<br />
 					<strong>Description:</strong>
 					<?php the_excerpt(); ?>
