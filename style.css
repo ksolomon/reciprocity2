@@ -124,9 +124,9 @@ body {
 			-webkit-flex-wrap: wrap;
 			-ms-flex-wrap: wrap;
 			flex-wrap: wrap;
-			-webkit-justify-content: right;
-			-ms-flex-pack: right;
-			justify-content: right;
+			-webkit-justify-content: flex-end;
+			-ms-flex-pack: flex-end;
+			justify-content: flex-end;
 			float: right;
 			font-size: 1.2rem;
 			margin: 0 0 1em;
