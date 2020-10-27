@@ -260,7 +260,7 @@ body {
 		width: 100%;
 	}
 
-	.home .navigation {
+	.home .navigation, .category .navigation {
 		border: none;
 		border-radius: 0;
 	}
