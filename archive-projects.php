@@ -14,6 +14,8 @@
 
 	<h2 class="pagetitle">Projects</h2>
 
+	<br />
+
 	<?php
 	$args = array(
 		'order'			 => 'ASC',

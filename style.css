@@ -21,21 +21,22 @@ Author URL: https://keithsolomon.net
 
 /** SITE COLOR VARIABLES */
 	:root {
-		--white: #ffffff;
-		--silver-chalice: #ababab;
-		--blue-sapphire: #065a82;
-		--xiketic: #010114;
-		--blue-sapphire-2: #0b4f6c;
-		--lt-gray: #f1f1f1;
-		--md-gray: #666666;
-		--dk-gray: #333333;
+		--blue-sapphire:	#065a82;
+		--blue-sapphire-2:	#0b4f6c;
+		--white:			#ffffff;
+		--lt-gray:			#f1f1f1;
+		--silver-chalice:	#ababab;
+		--md-gray:			#666666;
+		--dk-gray:			#333333;
+		--xiketic:			#010114;
 	}
 
 body {
 	background: var(--white);
 	color: var(--dk-gray);
-	font: 100%/1.6875 'Open Sans', sans-serif;
+	font-family: 'Open Sans', sans-serif;
 	font-size: clamp(0.6875rem, 0.5181rem + 0.7530vw, 1rem);
+	line-height: 1.25;
 	text-align: left;
 }
 
@@ -71,6 +72,12 @@ body {
 		padding: 5px 10px;
 	}
 
+	.wp-block-separator.is-style-wide {
+		border-bottom-width: 0 !important;
+		color: transparent !important;
+		margin-bottom: 15px;
+	}
+
 /** LINKS */
 	a:link, a:visited, a:active {
 		color: var(--blue-sapphire);
@@ -83,7 +90,7 @@ body {
 
 	a.more-link {
 		display: block;
-		margin-top: 1.5em;
+		margin-top: 1em;
 	}
 
 /** HEADER */
@@ -94,10 +101,10 @@ body {
 		border-top-right-radius: 0;
 		border-bottom-left-radius: 0;
 		padding: 0 10px;
-		margin: 1em 0 3em;
 		-webkit-flex: 0 1 100%;
 		-ms-flex: 0 1 100%;
 		flex: 0 1 100%;
+		margin: 1em 0 3em;
 	}
 
 	/** LOGO */
@@ -187,16 +194,6 @@ body {
 			padding: 0 10px;
 		}
 
-		.content .homemeta {
-			border: none;
-			color: var(--silver-chalice);
-			font-size: .85rem;
-			font-style: italic;
-			line-height: 1.25em;
-			margin-bottom: 1em;
-			padding: 0;
-		}
-
 	#content {
 		-webkit-flex: 0 1 80%;
 		-ms-flex: 0 1 80%;
@@ -249,16 +246,15 @@ body {
 		border-top-left-radius: 0;
 		border-bottom-right-radius: 0;
 		margin: 0 0 40px;
-		padding: 0 10px;
+		padding: 0 10px 5px;
 	}
 
 	.navigation {
-		border-bottom: 1px solid var(--silver-chalice);
-		border-left: none;
-		border-right: 1px solid var(--silver-chalice);
+		border: 1px solid var(--silver-chalice);
+		border-top: none;
 		border-radius: 10px;
+		border-top-left-radius: 0;
 		border-top-right-radius: 0;
-		border-bottom-left-radius: 0;
 		float: left;
 		padding: .5em 1em;
 		width: 100%;
@@ -278,7 +274,7 @@ body {
 			border-bottom-right-radius: 0;
 			float: left;
 			margin: 0 0 40px;
-			padding: 0 10px;
+			padding: 0 10px 10px;
 			width: 75%;
 		}
 
@@ -290,7 +286,7 @@ body {
 			border-top-right-radius: 0;
 			border-bottom-left-radius: 0;
 			float: right;
-			padding: 0 10px;
+			padding: 0 10px 10px;
 		}
 
 		.projimg {
@@ -532,7 +528,7 @@ body {
 		-webkit-flex: 0 1 100%;
 		-ms-flex: 0 1 100%;
 		flex: 0 1 100%;
-		float: left;
+		/* float: left; */
 		width:  100%;
 	}
 
