@@ -15,7 +15,7 @@
 				<h2 class="pagetitle"><a href="<?php the_permalink() ?>" rel="bookmark" title='Click to read: "<?php strip_tags(the_title()); ?>"'><?php the_title(); ?></a></h2>
 				<div class="postmeta">
 					<?php if (is_sticky()) : ?><h3 class="featured">Featured</h3><?php endif; ?>
-					Posted <?php the_time('F jS, Y') ?> &nbsp; &mdash; &nbsp; Filed under <?php the_category(', ') ?> <?php if (has_tag()) { ?> &nbsp; &mdash; &nbsp; Tagged <?php the_tags('', ', '); } ?>
+					Posted <?php the_time('F jS, Y') ?> &nbsp; &mdash; &nbsp; Filed under <?php the_category(', ') ?> <?php if (has_tag()) : ?> &nbsp; &mdash; &nbsp; Tagged <?php the_tags('', ', '); endif; ?>
 				</div>
 
 				<?php the_excerpt(); ?>

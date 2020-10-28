@@ -2,6 +2,10 @@
 
 <!-- content -->
 <div id="content" class="content">
+	<div class="breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
+		<?php bcn_display(); ?>
+	</div>
+
 	<?php is_tag(); ?>
 	<?php if (have_posts()) : ?>
 		<?php $post = $posts[0]; // Hack. Set $post so that the_date() works.
@@ -28,7 +32,7 @@
 				<h2 class="pagetitle"><a href="<?php the_permalink() ?>" rel="bookmark" title='Click to read: "<?php strip_tags(the_title()); ?>"'><?php the_title(); ?></a></h2>
 				<div class="postmeta">
 					<?php if (is_sticky()) : ?><h3 class="featured">Featured</h3><?php endif; ?>
-					Posted <?php the_time('F jS, Y') ?> &nbsp; &mdash; &nbsp; Filed under <?php the_category(', ') ?> <?php if (has_tag()) { ?> &nbsp; &mdash; &nbsp; Tagged <?php the_tags('', ', '); } ?>
+					Posted <?php the_time('F jS, Y') ?> &nbsp; &mdash; &nbsp; Filed under <?php the_category(', ') ?> <?php if (has_tag())  ?> &nbsp; &mdash; &nbsp; Tagged <?php the_tags('', ', '); endif; ?>
 				</div>
 
 				<?php the_excerpt(); ?>
