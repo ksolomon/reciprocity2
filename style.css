@@ -469,14 +469,14 @@ body {
 		.content li li { font-size: 1em; }
 
 /** SIDEBAR */
-	#sidebar {
+	/* #sidebar {
 		-webkit-flex: 0 1 15%;
 		-ms-flex: 0 1 15%;
 		flex: 0 1 15%;
 		padding-left: 25px;
-	}
+	} */
 
-	#sidebar.projects {
+	#sidebar {
 		border-bottom: 1px solid var(--silver-chalice);
 		border-left: 1px solid var(--silver-chalice);
 		border-radius: 10px;

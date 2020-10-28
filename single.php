@@ -10,7 +10,7 @@
 					<h2 class="pagetitle"><?php the_title(); ?></h2>
 					<div class="postmeta">
 						<?php if (is_sticky()) : ?><h3 class="featured">Featured</h3><?php endif; ?>
-						Posted <?php the_time('F jS, Y') ?> &nbsp; &mdash; &nbsp; Filed under <?php the_category(', ') ?> <?php if (has_tag()) { ?> &nbsp; &mdash; &nbsp; Tagged <?php the_tags('', ', '); } ?>
+						Posted <?php the_time('F jS, Y') ?> &nbsp; &mdash; &nbsp; Filed under <?php the_category(', ') ?> <?php if (has_tag()) : ?> &nbsp; &mdash; &nbsp; Tagged <?php the_tags('', ', '); endif; ?>
 					</div>
 				</div>
 
@@ -35,5 +35,7 @@
 	<?php endif; ?>
 </section>
 <!-- /content -->
+
+<?php get_sidebar(); ?>
 
 <?php get_footer(); ?>
