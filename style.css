@@ -159,7 +159,7 @@ body {
 			text-decoration: none;
 		}
 
-		#nav li a:hover, #nav li.current_page_item a, #nav li.current-page-ancestor a {
+		#nav li a:hover, #nav li.current_page_item a, #nav li.current-post-active a {
 			color: var(--silver-chalice);
 		}
 
@@ -192,6 +192,10 @@ body {
 			border-bottom-left-radius: 0;
 			float: right;
 			padding: 0 10px;
+		}
+
+		#content.home .postmeta {
+			padding: 0 .5em 1.2em;
 		}
 
 	#content {

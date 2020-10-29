@@ -122,11 +122,13 @@ function sf_generate_title_tag() {
 
 // Add class to link in menu for styling
 function project_nav_class($classes, $item) {
-	if ((is_singular('projects') || is_tax('software') || is_tax('skills') || is_archive('projects')) && $item->title == 'Projects') {
-		$classes[] = "current-page-ancestor";
+	if (('projects' == get_post_type() || is_tax('software') || is_tax('skills') || is_archive('projects')) && $item->title == 'Projects') {
+		$classes[] = "current-post-active";
 	}
+
 	return $classes;
 }
+
 add_filter('nav_menu_css_class', 'project_nav_class', 10, 2);
 
 // Core navigation functions
@@ -210,6 +212,7 @@ function sf_recent_posts($args='') {
 		$excerpt = '('.$postdate.') ';
 		$excerpt .= get_the_excerpt();
 		$title = get_the_title();
+		$rec_posts = '';
 
 		$rec_posts .= '<h4>'.$title.'</h4>';
 		$rec_posts .= '<div class="news-summary">'.$excerpt.'</div>';
@@ -247,19 +250,24 @@ function sf_addFirstLastClass($pageList) {
 	// replace first and last of the li array with new lis
 
 	// rebuild newPageList
+		$newPageList = '';
+
 		// set first li
 		$newPageList .= $newFirstLi.'';
-		$i=1;
-		while($i<$lastLiPosition)	{
+		$i = 1;
+
+		while ($i<$lastLiPosition) {
 			$newPageList .= $liArray[$i];
 			$i++;
 		}
+
 		// set last li
 		$newPageList .= $newLastLi;
 
 		// lastly, replace old list with new list
 		$pageList = str_replace($allLis[0],$newPageList,$pageList);
-	return $pageList;
+
+		return $pageList;
 }
 
 add_filter('wp_list_pages', 'sf_addFirstLastClass');
@@ -345,7 +353,7 @@ function sf_breadcrumbs($args='') {
 			$breadcrumbs = array();
 
 			while ($parent_id) {
-				$page = get_page($parent_id);
+				$page = get_post($parent_id);
 				$breadcrumbs[] = '<a href="' . get_permalink($page->ID) . '">' . get_the_title($page->ID) . '</a>';
 				$parent_id  = $page->post_parent;
 			}
@@ -406,7 +414,7 @@ function sf_copyright() {
 }
 
 // Get page slug
-function sf_get_slug() {
+function sf_get_slug($post) {
     $post_data = get_post($post->ID, ARRAY_A);
     $slug = $post_data['post_name'];
     return $slug;
